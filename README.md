@@ -1,1 +1,1 @@
-Use with the official [tuning downloader](http://www.marksmart.net/instruments/continuum/tunings/FullRange.php).
+Use with the official [tuning downloader](http://www.marksmart.net/instruments/continuum/tunings/FullRange.php). Minimal changes are necessary to adapt this half size code for full size Continuums. I recommend testing the extremes of the X (pitch) dimension and extending the mapping a little bit beyond the playable key range. The internal engine should handle the out-of-range tuning just fine, and in return rounding doesn't go haywire at the edges.
