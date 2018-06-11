@@ -1,4 +1,6 @@
-notesPerSide, middle = 18, "A"
+notesPerSide = 18
+middle = "A"
+centerNote = 62 #the MIDI center key of half sizes isn't middle C (60)
 
 from decimal import Decimal
 newLeft = newRight = 60 #MIDI middle C
@@ -10,8 +12,8 @@ for i in range("ABCDEFG".index(middle)):
     rightDs = rightDs[1:] + rightDs[:1]
 func = {}
 for i in range(notesPerSide + 2):
-    func[62 - dOld] = newLeft #the center key of half sizes isn't middle C
-    func[62 + dOld] = newRight
+    func[centerNote - dOld] = newLeft
+    func[centerNote + dOld] = newRight
     newLeft -= leftDs[0]
     newRight += rightDs[0]
     leftDs = leftDs[-1:] + leftDs[:-1]
